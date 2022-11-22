@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GymGeniX</string>
+    <string name="welcome_message">Welcome guys</string>
+    <string name="gymgenix">GymGeniX</string>
 </resources>
