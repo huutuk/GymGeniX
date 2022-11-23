@@ -34,14 +34,19 @@ mainList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         // on ajoute les autres activities ici
-        /*
+
         if (i == 0) {
-            Intent intent = new Intent(view.getContext(), TEST1.class);
+            Intent intent = new Intent(view.getContext(), SeanceDuJour.class);
             startActivity(intent);
 
         }
 
-         */
+        if (i == 2) {
+            Intent intent = new Intent(view.getContext(), CatalogExo.class);
+            startActivity(intent);
+
+        }
+
     }
 });
 
