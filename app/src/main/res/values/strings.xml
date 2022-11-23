@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">GymGeniX</string>
-    <string name="welcome_message">Welcome guys</string>
     <string name="gymgenix">GymGeniX</string>
+
+    <string-array name="pageNames">
+        <item>Séance du jour</item>
+        <item>Calendrier</item>
+        <item>Exercices</item>
+        <item>Progrès</item>
+    </string-array>
     <string name="catalogue_d_exercices">Catalogue d\'exercices</string>
     <string name="haut_du_corps">Haut du corps</string>
     <string name="pectoraux">Pectoraux</string>
