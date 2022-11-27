@@ -2,14 +2,21 @@ package com.example.gymgenix;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class CatalogExo extends AppCompatActivity {
-    ListView lv;
+    ListView listView;
+    TextView textview;
+    String[] listItems;
+
     ArrayList<String> data;
     ArrayAdapter<String> adapter;
 
@@ -18,18 +25,21 @@ public class CatalogExo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalog_exo);
 
-        lv = (ListView) findViewById(R.id.liste_exo);
-        data = new ArrayList<>();
-        data.add("Haut du corps");
-        data.add("Bas du corps");
-        data.add("Abdos");
-        data.add("Cardio");
-        data.add("Étirements");
-        https://developer.android.com/guide/topics/ui/declaring-layout#AdapterViews
-        /* adapts an array of data of type List<T> of undetermined size. this is to further be used by a view */
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,  /* android standard layout for a single entry from list: just some text and just a horizontal separator */
-                data /* the List<T> contents */);
-        lv.setAdapter(adapter);
+        listView = findViewById(R.id.liste_exo);
+        textview = findViewById(R.id.TextCatalogID);
+
+        listItems = getResources().getStringArray(R.array.partie_du_corps);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, listItems);
+        listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(CatalogExo.this, GroupeExercice.class);
+                intent.putExtra("value", arrayAdapter.getItem(i).toString());
+                startActivity(intent);
+            }
+        });
+
     }
 }

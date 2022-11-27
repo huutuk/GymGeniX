@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymGeniX">
         <activity
+            android:name=".GroupeExercice"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SeanceDuJour"
             android:exported="false">
             <meta-data
@@ -26,28 +33,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Bras"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Dos"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Pectoraux"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".HautDuCorps"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

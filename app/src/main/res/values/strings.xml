@@ -8,6 +8,21 @@
         <item>Exercices</item>
         <item>Progrès</item>
     </string-array>
+
+    <string-array name="partie_du_corps">
+        <item>haut du corps</item>
+        <item>bas du corps</item>
+        <item>abdos</item>
+        <item>cardio</item>
+        <item>etirements</item>
+    </string-array>
+
+    <string-array name="groupe_musuclaire">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
     <string name="catalogue_d_exercices">Catalogue d\'exercices</string>
     <string name="haut_du_corps">Haut du corps</string>
     <string name="pectoraux">Pectoraux</string>
