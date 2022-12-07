@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymGeniX">
         <activity
-            android:name=".GroupeExercice"
+            android:name=".ExercicesCatalog"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MuscleCatalog"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -28,13 +35,6 @@
         <activity
             android:name=".Progres"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Pectoraux"
-            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
