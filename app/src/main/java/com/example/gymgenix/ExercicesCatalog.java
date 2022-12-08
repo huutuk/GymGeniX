@@ -25,6 +25,7 @@ public class ExercicesCatalog extends AppCompatActivity {
 
         ListView listExercicesLV = findViewById(R.id.exercicesLVID);
 
+        // Traitement list
         String muscle = getIntent().getStringExtra("muscle");
 
         List<Exercice> exerciceListToDisplay = exerciceList.stream()
@@ -39,7 +40,7 @@ public class ExercicesCatalog extends AppCompatActivity {
         Set<String> set = new HashSet<>(nomExerciceToDisplay);
         nomExerciceToDisplay.clear();
         nomExerciceToDisplay.addAll(set);
-
+        // Fin de traitement
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nomExerciceToDisplay);
         listExercicesLV.setAdapter(adapter);
 
