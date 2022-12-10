@@ -25,6 +25,11 @@ public class ExercicesCatalog extends AppCompatActivity {
 
         ListView listExercicesLV = findViewById(R.id.exercicesLVID);
 
+        // Create Data
+        /*ArrayList<Exercice> arrayList = new ArrayList<>();
+
+        arrayList.add(new Exercice());*/
+
         // Traitement list
         String muscle = getIntent().getStringExtra("muscle");
 

@@ -8,11 +8,13 @@ public class Exercice {
     private String nom;
     private String[] muscles;
     private String groupeExo;
+    private String imageURL;
 
-    public Exercice(String nom, String[] muscles, String groupeExo) {
+    public Exercice(String nom, String[] muscles, String groupeExo, String imageURL) {
         this.nom = nom;
         this.muscles = muscles;
         this.groupeExo = groupeExo;
+        this.imageURL = imageURL;
     }
 
     @Override
@@ -21,6 +23,7 @@ public class Exercice {
                 "nom='" + nom + '\'' +
                 ", muscles=" + Arrays.toString(muscles) +
                 ", groupeExo='" + groupeExo + '\'' +
+                ", imageURL=" + imageURL + '\'' +
                 '}';
     }
 
@@ -48,7 +51,14 @@ public class Exercice {
         this.groupeExo = groupeExo;
     }
 
+    public String getImageURL() {
+        return imageURL;
+    }
 
-// END SETTERS
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    // END SETTERS
 
 }
