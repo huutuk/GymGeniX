@@ -42,13 +42,26 @@ public class ExercicesCatalog extends AppCompatActivity {
         exerciceListToDisplay.stream()
                 .forEach(exo -> nomExerciceToDisplay.add(exo.getNom()));
 
+
+        /*ArrayList<Integer> imageToDisplay = new ArrayList<Integer>();
+
+        exerciceListToDisplay.stream()
+                .forEach(exo -> imageToDisplay.add(exo.getImage()));
+
+        Set<Integer> setInt = new HashSet<>(imageToDisplay);
+        imageToDisplay.clear();
+        imageToDisplay.addAll(setInt);
+        */
+
         Set<String> set = new HashSet<>(nomExerciceToDisplay);
         nomExerciceToDisplay.clear();
         nomExerciceToDisplay.addAll(set);
         // Fin de traitement
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nomExerciceToDisplay);
-        listExercicesLV.setAdapter(adapter);
+        ExerciceAdapter exerciceAdapter = new ExerciceAdapter(this,R.layout.list_row,exerciceList);
+        listExercicesLV.setAdapter(exerciceAdapter);
 
+        /*adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nomExerciceToDisplay);
+        listExercicesLV.setAdapter(adapter);*/
 
     }
 }
