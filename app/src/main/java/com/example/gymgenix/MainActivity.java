@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mainList = findViewById(R.id.mainList);
-        page = getResources().getStringArray(R.array.pageNames);
+        page = new String[]{"Séances", "Calendrier", "Exercices", "Progrès"};
         // PageNames contient la liste des pages
 
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 // on ajoute les autres activities ici
 
                 if (i == 0) {
-                    Intent intent = new Intent(view.getContext(), SeanceDuJour.class);
+                    Intent intent = new Intent(view.getContext(), Seances.class);
                     startActivity(intent);
 
                 }

@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymGeniX">
         <activity
+            android:name=".AddSeance"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ExercicesCatalog"
             android:exported="false">
             <meta-data
@@ -26,8 +33,9 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SeanceDuJour"
-            android:exported="false">
+            android:name=".Seances"
+            android:exported="false"
+            android:label="Seances">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

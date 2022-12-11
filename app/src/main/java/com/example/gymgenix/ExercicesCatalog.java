@@ -57,7 +57,7 @@ public class ExercicesCatalog extends AppCompatActivity {
         nomExerciceToDisplay.clear();
         nomExerciceToDisplay.addAll(set);
         // Fin de traitement
-        ExerciceAdapter exerciceAdapter = new ExerciceAdapter(this,R.layout.list_row,exerciceList);
+        ExerciceAdapter exerciceAdapter = new ExerciceAdapter(this, R.layout.list_row, (ArrayList<Exercice>) exerciceListToDisplay);
         listExercicesLV.setAdapter(exerciceAdapter);
 
         /*adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nomExerciceToDisplay);
