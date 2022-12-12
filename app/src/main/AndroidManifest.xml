@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymGeniX">
         <activity
-            android:name=".AddSeance"
+            android:name=".EditSeanceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SeanceActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -27,21 +34,6 @@
         </activity>
         <activity
             android:name=".MuscleCatalog"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Seances"
-            android:exported="false"
-            android:label="Seances">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Progres"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
