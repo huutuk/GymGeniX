@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
+    android:background="#242C44"
     android:orientation="vertical"
     tools:context=".ExercicesCatalog">
 
     <ListView
         android:id="@+id/exercicesLVID"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent" />
 
     <!--<ImageView
         android:id="@+id/image"

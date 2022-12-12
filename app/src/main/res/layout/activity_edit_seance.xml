@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242C44"
+    android:padding="16dp"
+    tools:context=".EditSeanceActivity">
+
+
+    <AutoCompleteTextView
+        android:id="@+id/at_exoName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/weight_inc"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_weight"
+        android:layout_alignBottom="@+id/tv_weight"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/tv_weight"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/rep_dec"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_rep"
+        android:layout_alignBottom="@+id/tv_rep"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/tv_rep"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/tv_rep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="8dp"
+        android:text="0"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/rep_inc"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_rep"
+        android:layout_alignBottom="@+id/tv_rep"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/tv_rep"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/weight_dec"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_weight"
+        android:layout_alignBottom="@+id/tv_weight"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/tv_weight"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/tv_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_rep"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="201dp"
+        android:layout_marginBottom="8dp"
+        android:text="0"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/add_exo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="275dp"
+        android:text="Ajouter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_exos"
+        android:layout_width="match_parent"
+        android:layout_height="334dp"
+        android:layout_below="@+id/add_exo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="29dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_rep"
+        android:layout_alignBottom="@+id/tv_rep"
+        android:gravity="center"
+        android:text="Répétitions" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_weight"
+        android:layout_alignBottom="@+id/tv_weight"
+        android:gravity="center"
+        android:text="Poids" />
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="72dp"
+        android:layout_height="85dp"
+        android:layout_alignTop="@+id/add_exo"
+        android:layout_alignBottom="@+id/add_exo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/left" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="72dp"
+        android:layout_height="85dp"
+        android:layout_alignTop="@+id/add_exo"
+        android:layout_alignBottom="@+id/add_exo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_exo"
+        android:layout_alignBottom="@+id/add_exo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="-3dp"
+        android:gravity="center"
+        android:text="Edit"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_exo"
+        android:layout_alignBottom="@+id/add_exo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-3dp"
+        android:gravity="center"
+        android:text="Delete"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
