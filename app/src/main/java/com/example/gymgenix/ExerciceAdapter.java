@@ -34,11 +34,15 @@ public class ExerciceAdapter extends ArrayAdapter<Exercice> {
 
         ImageView imageView = convertView.findViewById(R.id.image);
 
-        TextView textView = convertView.findViewById(R.id.nameExo);
+        TextView nameExo = convertView.findViewById(R.id.nameExo);
+
+        TextView des = convertView.findViewById(R.id.des);
 
         imageView.setImageResource(getItem(position).getImage());
 
-        textView.setText(getItem(position).getNom());
+        nameExo.setText(getItem(position).getNom());
+
+        des.setText(getItem(position).getDes());
 
         return convertView;
     }

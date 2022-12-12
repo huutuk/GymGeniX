@@ -54,7 +54,6 @@ public class MuscleCatalog extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, muscleToDisplay);
         listMuscleLV.setAdapter(adapter);
 
-
         listMuscleLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

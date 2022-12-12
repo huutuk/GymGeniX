@@ -4,18 +4,33 @@
     android:padding="16dp"
     android:layout_height="match_parent">
 
+
+
     <ImageView
         android:id="@+id/image"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_below="@id/nameExo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         />
 
     <TextView
         android:id="@+id/nameExo"
-        android:layout_toRightOf="@+id/image"
+
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NameExo"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_below="@id/image"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        style="@style/TextAppearance.AppCompat.Body1"
         />
 </RelativeLayout>
