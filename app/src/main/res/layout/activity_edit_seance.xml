@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:hint="Nom de L'exercice" />
 
     <Button
         android:id="@+id/weight_inc"
@@ -26,7 +27,22 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toEndOf="@+id/tv_weight"
-        android:text="+" />
+        android:text="+1"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/weight_10inc"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_weight"
+        android:layout_alignBottom="@+id/tv_weight"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/weight_inc"
+        android:text="+10"
+
+        android:textSize="8dp" />
 
     <Button
         android:id="@+id/rep_dec"
@@ -38,7 +54,21 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/tv_rep"
-        android:text="-" />
+        android:text="-1"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/rep_5dec"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_rep"
+        android:layout_alignBottom="@+id/tv_rep"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/rep_dec"
+        android:text="-5"
+        android:textSize="8dp" />
 
     <TextView
         android:id="@+id/tv_rep"
@@ -61,7 +91,21 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toEndOf="@+id/tv_rep"
-        android:text="+" />
+        android:text="+1"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/rep_5inc"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_rep"
+        android:layout_alignBottom="@+id/tv_rep"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/rep_inc"
+        android:text="+5"
+        android:textSize="8sp" />
 
     <Button
         android:id="@+id/weight_dec"
@@ -73,7 +117,20 @@
         android:layout_marginEnd="-1dp"
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/tv_weight"
-        android:text="-" />
+        android:text="-1" />
+
+    <Button
+        android:id="@+id/weight_10dec"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_weight"
+        android:layout_alignBottom="@+id/tv_weight"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/weight_dec"
+        android:text="-10"
+        android:textSize="8dp" />
 
     <TextView
         android:id="@+id/tv_weight"
@@ -113,7 +170,7 @@
         android:layout_alignTop="@+id/tv_rep"
         android:layout_alignBottom="@+id/tv_rep"
         android:gravity="center"
-        android:text="Répétitions" />
+        android:text="Réps" />
 
     <TextView
         android:id="@+id/textView4"
@@ -154,7 +211,7 @@
         android:layout_marginTop="3dp"
         android:layout_marginBottom="-3dp"
         android:gravity="center"
-        android:text="Edit"
+        android:text="swipe\nEdit"
         android:textStyle="bold" />
 
     <TextView
@@ -167,7 +224,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="-3dp"
         android:gravity="center"
-        android:text="Delete"
+        android:text="swipe\nDelete"
         android:textStyle="bold" />
 
 

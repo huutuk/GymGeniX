@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -73,6 +74,7 @@ public class EditSeanceActivity extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 deleteExo((long) viewHolder.itemView.getTag());
+                Toast.makeText(EditSeanceActivity.this, "supprimé!", Toast.LENGTH_SHORT).show();
                 exoAdapter.notifyDataSetChanged();
 
             }
@@ -86,6 +88,10 @@ public class EditSeanceActivity extends AppCompatActivity {
         Button buttonRepDec = findViewById(R.id.rep_dec);
         Button buttonWeightInc = findViewById(R.id.weight_inc);
         Button buttonWeightDec = findViewById(R.id.weight_dec);
+        Button buttonRep5Inc = findViewById(R.id.rep_5inc);
+        Button buttonRep5Dec = findViewById(R.id.rep_5dec);
+        Button buttonWeight10Inc = findViewById(R.id.weight_10inc);
+        Button buttonWeight10Dec = findViewById(R.id.weight_10dec);
         Button buttonAddExo = findViewById(R.id.add_exo);
 
 
@@ -113,6 +119,34 @@ public class EditSeanceActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 weightDecreased();
+            }
+        });
+
+        ////
+        buttonRep5Inc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rep5Increased();
+            }
+        });
+        buttonRep5Dec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rep5Decreased();
+
+            }
+        });
+
+        buttonWeight10Inc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                weight10Increased();
+            }
+        });
+        buttonWeight10Dec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                weight10Decreased();
             }
         });
 
@@ -149,9 +183,35 @@ public class EditSeanceActivity extends AppCompatActivity {
             tvWeightAmount.setText(String.valueOf(weightAmount));
         }
     }
+    //
+
+    private void rep5Increased() {
+        repAmount += 5;
+        tvRepAmount.setText(String.valueOf(repAmount));
+    }
+
+    private void rep5Decreased() {
+        if (repAmount > 4) {
+            repAmount -= 5;
+            tvRepAmount.setText(String.valueOf(repAmount));
+        }
+    }
+
+    private void weight10Increased() {
+        weightAmount += 10;
+        tvWeightAmount.setText(String.valueOf(weightAmount));
+    }
+
+    private void weight10Decreased() {
+        if (weightAmount > 9) {
+            weightAmount -= 10;
+            tvWeightAmount.setText(String.valueOf(weightAmount));
+        }
+    }
 
     private void addExo() {
         if (autoCompleteTextView.getText().toString().trim().length() == 0 || repAmount == 0 || weightAmount < 0) {
+            Toast.makeText(this, "nom/rep/poids requis", Toast.LENGTH_SHORT).show();
             return;
         }
         String name = autoCompleteTextView.getText().toString();
@@ -161,6 +221,7 @@ public class EditSeanceActivity extends AppCompatActivity {
         cv.put(SeanceStringUtils.ExoEntry.COLUMN_EXO_WEIGHT, weightAmount);
         cv.put(SeanceStringUtils.ExoEntry.COLUMN_EXO_SEANCENAME, seanceName);
         database.insert(SeanceStringUtils.ExoEntry.TABLE_EXO_NAME, null, cv);
+        Toast.makeText(this, "Ajouté!", Toast.LENGTH_SHORT).show();
         exoAdapter.swapCursor(getAllItems());
     }
 

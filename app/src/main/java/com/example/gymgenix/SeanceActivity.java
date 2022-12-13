@@ -50,6 +50,7 @@ public class SeanceActivity extends AppCompatActivity {
                 db.deleteSeance(seanceList.get(arg2));
 
                 seanceList.remove(arg2);
+                Toast.makeText(SeanceActivity.this, "Séance supprimée!", Toast.LENGTH_SHORT).show();
 
                 adapter.notifyDataSetChanged();
 
