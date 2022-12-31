@@ -23,16 +23,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mainList = findViewById(R.id.mainList);
+        // la liste des pages
         page = new String[]{"Séances", "Exercices"};
-        // PageNames contient la liste des pages
 
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, page);
         mainList.setAdapter(adapter);
+
+        // onClick listener pour changer de page
         mainList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                // on ajoute les autres activities ici
+                // on ajoute les autres pages ici
 
                 if (i == 0) {
                     Intent intent = new Intent(view.getContext(), SeanceActivity.class);

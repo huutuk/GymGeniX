@@ -2,6 +2,7 @@ package com.example.gymgenix;
 
 import android.provider.BaseColumns;
 
+// Classe permettant l'ajout de nom de colonnes/tables
 public class SeanceStringUtils {
 
     private SeanceStringUtils() {

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+//adapter pour la RecyclerView
 public class ExoAdapter extends RecyclerView.Adapter<ExoAdapter.ExoViewHolder> {
 
     private Context context;

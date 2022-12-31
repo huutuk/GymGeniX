@@ -1,12 +1,7 @@
 package com.example.gymgenix;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,10 +24,9 @@ public class ExercicesCatalog extends AppCompatActivity {
         setContentView(R.layout.activity_exercices_catalog);
 
 
-
         ListView listExercicesLV = findViewById(R.id.exercicesLVID);
 
-        // Traitement list
+        // on récupère le nom du muscle
         String muscle = getIntent().getStringExtra("muscle");
 
         List<Exercice> exerciceListToDisplay = exerciceList.stream()
@@ -41,6 +35,7 @@ public class ExercicesCatalog extends AppCompatActivity {
 
         ArrayList<String> nomExerciceToDisplay = new ArrayList<String>();
 
+        //On filtre les exercices correspondant au bon muscle
         exerciceListToDisplay.stream()
                 .forEach(exo -> nomExerciceToDisplay.add(exo.getNom()));
 
@@ -52,9 +47,6 @@ public class ExercicesCatalog extends AppCompatActivity {
         ExerciceAdapter exerciceAdapter = new ExerciceAdapter(this, R.layout.list_row, (ArrayList<Exercice>) exerciceListToDisplay);
         listExercicesLV.setAdapter(exerciceAdapter);
 
-
-        /*adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nomExerciceToDisplay);
-        listExercicesLV.setAdapter(adapter);*/
 
     }
 }

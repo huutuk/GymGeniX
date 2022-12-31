@@ -21,14 +21,15 @@ public class CatalogExo extends AppCompatActivity {
         setContentView(R.layout.activity_catalog_exo);
 
         groupeLV = findViewById(R.id.catalogLVID);
+        //menu
         groupeList = new String[]{"Haut", "Jambes"};
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, groupeList);
         groupeLV.setAdapter(adapter);
 
+        // onClick pour changer de page
         groupeLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                // on ajoute les autres activities ici
 
                 Intent intent = new Intent(CatalogExo.this, MuscleCatalog.class);
                 intent.putExtra("groupeExo", adapter.getItem(i).toString());

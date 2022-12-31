@@ -52,6 +52,8 @@ public class EditSeanceActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         exoAdapter = new ExoAdapter(this, getAllItems());
         recyclerView.setAdapter(exoAdapter);
+
+        //Edition de l'exercice
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -65,6 +67,7 @@ public class EditSeanceActivity extends AppCompatActivity {
             }
         }).attachToRecyclerView(recyclerView);
 
+        //suppression de l'exercice
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -84,6 +87,7 @@ public class EditSeanceActivity extends AppCompatActivity {
         tvRepAmount = findViewById(R.id.tv_rep);
         tvWeightAmount = findViewById(R.id.tv_weight);
 
+
         Button buttonRepInc = findViewById(R.id.rep_inc);
         Button buttonRepDec = findViewById(R.id.rep_dec);
         Button buttonWeightInc = findViewById(R.id.weight_inc);
@@ -95,6 +99,7 @@ public class EditSeanceActivity extends AppCompatActivity {
         Button buttonAddExo = findViewById(R.id.add_exo);
 
 
+        // toutes les methodes pour gerer les incrémentations de poids et de répétitions
         buttonRepInc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

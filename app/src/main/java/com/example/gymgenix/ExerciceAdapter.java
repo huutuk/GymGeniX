@@ -8,12 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+// adapter pour la listView des exercices
 public class ExerciceAdapter extends ArrayAdapter<Exercice> {
     private Context mContext;
     private int mResource;
@@ -30,7 +30,7 @@ public class ExerciceAdapter extends ArrayAdapter<Exercice> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater = LayoutInflater.from(mContext);
 
-        convertView = layoutInflater.inflate(mResource,parent,false);
+        convertView = layoutInflater.inflate(mResource, parent, false);
 
         ImageView imageView = convertView.findViewById(R.id.image);
 

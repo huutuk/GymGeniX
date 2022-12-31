@@ -19,6 +19,7 @@ public class SeanceDBHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    // nos deux tables
     @Override
     public void onCreate(SQLiteDatabase db) {
         final String SQL_CREATE_SEANCELIST_TABLE = "CREATE TABLE " +
@@ -45,6 +46,7 @@ public class SeanceDBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + ExoEntry.TABLE_EXO_NAME);
         onCreate(db);
     }
+
 
     public boolean insertSeance(String seanceName) {
         SQLiteDatabase db = this.getWritableDatabase();

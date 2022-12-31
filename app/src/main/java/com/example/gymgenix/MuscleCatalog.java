@@ -2,7 +2,6 @@ package com.example.gymgenix;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -30,6 +29,7 @@ public class MuscleCatalog extends AppCompatActivity {
         TextView nomMuscleTV = findViewById(R.id.muscleTVID);
         ListView listMuscleLV = findViewById(R.id.muscleLVID);
 
+        // on récupère la partie du corps
         String groupeExo = getIntent().getStringExtra("groupeExo");
 
         nomMuscleTV.setText(groupeExo);
@@ -38,15 +38,14 @@ public class MuscleCatalog extends AppCompatActivity {
                 .filter(exo -> exo.getGroupeExo().equals(groupeExo))
                 .collect(Collectors.toList());
 
-        exoListToDisplay.stream()
-                .forEach(exo -> Log.i("cc", exo.toString()));
-
 
         ArrayList<String> muscleToDisplay = new ArrayList<String>();
         exoListToDisplay
                 .stream()
                 .forEach(exo -> muscleToDisplay.addAll(Arrays.asList(exo.getMuscles())));
 
+
+        //suppression des doublons via un set
         Set<String> set = new HashSet<>(muscleToDisplay);
         muscleToDisplay.clear();
         muscleToDisplay.addAll(set);
@@ -54,6 +53,7 @@ public class MuscleCatalog extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, muscleToDisplay);
         listMuscleLV.setAdapter(adapter);
 
+        // idem que la main activity
         listMuscleLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

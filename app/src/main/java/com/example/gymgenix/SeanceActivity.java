@@ -39,6 +39,7 @@ public class SeanceActivity extends AppCompatActivity {
         viewSeance();
         onBtnClick();
 
+        // suppresion d'une séance
         lvSeanceList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
             @Override
@@ -58,6 +59,7 @@ public class SeanceActivity extends AppCompatActivity {
             }
         });
 
+        // on entre dans la séance -> edition de la séance en question
         lvSeanceList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
